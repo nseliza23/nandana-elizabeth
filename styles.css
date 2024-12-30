@@ -1,0 +1,246 @@
+<<<<<<< HEAD
+body {
+    /* 
+    background-color: lightblue;
+     */
+    background-color:rgb(0, 0, 139);
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-family: 'arial';
+    font-size: 30px;
+    /*padding-top: 10%;*/
+
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /*font-family: family-name | generic-family | initial | inherit;*/
+    font-size: 75px;
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-family: 'Tahoma'; /*font-family: family-name | generic-family | initial | inherit;*/
+    font-size: 25px;
+    padding-top: 2%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex; /* Flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Arrange elements vertically */
+    text-align: center; /* Center the text */
+    z-index: 3; /*makes sure text is in front of animated background*/
+}
+
+.sec {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    background:rgb(0, 0, 145);
+    gap: 30px;
+}
+.sec .box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background:rgb(0, 0, 139);
+}
+
+.animate {
+    animation: animate 1s linear forwards;
+}
+ 
+@keyframes animate {
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        background: lightcyan;
+    }
+    100% 
+    {
+        filter: hue-rotate(0deg);
+    }
+}
+=======
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, black, #0000ff, #00ffff);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+    scroll-behavior: smooth;
+}
+
+@keyframes gradient {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h4 {
+    /* text-align: center; */
+    color: white;
+    font-family: 'Candara', 'serif';
+    font-size: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-family: 'arial';
+    font-size: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /*font-family: family-name | generic-family | initial | inherit;*/
+    font-size: 75px;
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-family: 'Candara', 'serif'; /*font-family: family-name | generic-family | initial | inherit;*/
+    font-size: 22px;
+    padding-top: 2%;
+    padding-left: 9%;
+    padding-right: 9%;
+    text-align: justify;
+}
+
+a {
+    text-align: center;
+    color: white;
+    font-family: 'Candara', 'serif'; /*font-family: family-name | generic-family | initial | inherit;*/
+    font-size: 22px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex; /* Flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Arrange elements vertically */
+    text-align: center; /* Center the text */
+    z-index: 3; /*makes sure text is in front of animated background*/
+}
+
+.navbar {
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 4
+}
+
+.navbar a {
+    margin-right: 20px; /* Space between navbar items */
+    color: white; 
+    font-family: 'Candara', 'Arial', sans-serif;
+    font-size: 20px;
+    text-decoration: none; /* Remove underline for links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar a:hover {
+    color: white; /* Highlight effect when hovered */
+    text-shadow: 0 0 10px white, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+    transition: all 0.3s ease-in-out; /* Smooth animation */
+}
+
+.main-container {
+    display: flex; /* Flexbox to arrange the frames horizontally */
+    justify-content: space-between; /* Distribute space between the frames */
+    align-items: center; /* Center content vertically */
+    width: 100%;
+    padding: 20px;
+}
+
+.left-frame, .middle-frame, .right-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: left; 
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(10, 31, 185, 0.1);
+    margin: 1%;
+    padding: 2%;
+    position: relative;
+}
+
+/* .sec {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(blue, aqua);
+    gap: 30px;
+} */
+/* .sec .box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background:rgb(0, 0, 139);
+} */
+>>>>>>> 8abf826 (commit to v2)
