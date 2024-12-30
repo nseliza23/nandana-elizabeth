@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const canvas = document.getElementById("portfolioCanvas");
 
 // Dynamically change the canvas size to the window size
@@ -33,8 +32,6 @@ boxes[num].classList.toggle('animate');
 }
 
 setInterval(animateBox, 2);
-=======
-const canvas = document.getElementById("portfolioCanvas");
 
 // Dynamically change the canvas size to the window size
 function resizeCanvas() {
@@ -68,4 +65,3 @@ window.addEventListener('resize', resizeCanvas);
 // }
 
 // setInterval(animateBox, 2);
->>>>>>> 8abf826 (commit to v2)
